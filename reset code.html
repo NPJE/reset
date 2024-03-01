@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Reset</title>
+  <style>
+    /* Add your desired styles here */
+  </style>
+</head>
+<body>
+  <h1>Welcome, do you want to reset your password?</h1>
+  <button id="change-password-btn">Change Password</button>
+
+  <div id="reset-prompt" style="display: none;">
+    <h2>Reset Password</h2>
+    <button id="reset-password-btn">Reset Password</button>
+    <button id="cancel-btn">Don't Reset Password</button>
+  </div>
+
+  <script>
+    const changePasswordBtn = document.getElementById('change-password-btn');
+    const resetPrompt = document.getElementById('reset-prompt');
+    const resetPasswordBtn = document.getElementById('reset-password-btn');
+    const cancelBtn = document.getElementById('cancel-btn');
+
+    changePasswordBtn.addEventListener('click', () => {
+      resetPrompt.style.display = 'block'; 
+    });
+
+    resetPasswordBtn.addEventListener('click', () => {
+      alert('Reset password successful!'); 
+      resetPrompt.style.display = 'none'; 
+    });
+
+    cancelBtn.addEventListener('click', () => {
+      alert('Reset password failed.'); 
+      resetPrompt.style.display = 'none'; 
+    });
+  </script>
+</body>
+</html>
